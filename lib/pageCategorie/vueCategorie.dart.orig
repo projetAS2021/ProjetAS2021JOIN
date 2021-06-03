@@ -1,0 +1,331 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_demo/pageCategorie/controllerCategorie.dart';
+import 'package:mvc_pattern/mvc_pattern.dart';
+
+// pour la partie parametres de la page categorie
+import 'package:flutter_demo/PageParametres/ParametreControllers.dart';
+
+class Categorie extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _Categorie();
+  }
+}
+
+class _Categorie extends StateMVC<Categorie> {
+  _Categorie() : super(ControllerCategorie()) {
+    _co = ControllerCategorie.con;
+  }
+  String boutonSelec = '';
+  ControllerCategorie? _co;
+  @override
+  Widget build(BuildContext context) {
+    String nomCategorie = 'Loyer';
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Join.'),
+          backgroundColor: Colors.lightBlueAccent,
+          centerTitle: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {},
+          ),
+          bottom: TabBar(
+            tabs: [
+              Tab(icon: Icon(Icons.list)),
+              Tab(icon: Icon(Icons.settings)),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            CustomScrollView(
+              primary: false,
+              slivers: <Widget>[
+                SliverPadding(
+                  padding: const EdgeInsets.all(20),
+                  sliver: SliverGrid.count(
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    crossAxisCount: 1,
+                    childAspectRatio: 7,
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.all(15),
+                        padding: EdgeInsets.only(left: 10),
+                        decoration: BoxDecoration(
+                          color: Colors.orange,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            InkWell(
+                              onTap: () {
+                                _co!.changerTitre(nomCategorie);
+                              },
+                              child: Text(
+                                '$nomCategorie', //----------------------------------------------------------------------------------------
+                                style: TextStyle(fontSize: 15),
+                              ),
+                            ),
+                            Container(
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  IconButton(
+                                      icon: Icon(Icons.article_sharp),
+                                      tooltip: 'renommer catégorie',
+                                      onPressed: () => _co!.changerTitre(
+                                          nomCategorie) //fonction qui est défini dans le controller
+                                      ),
+                                  IconButton(
+<<<<<<< HEAD
+                                    icon: Icon(Icons.auto_delete),
+                                    tooltip: 'supprimer catégorie',
+                                    onPressed: () => _co
+                                      ?.supprimerCategorie() //fonction a faire plus tard
+                                  ),
+=======
+                                      icon: Icon(Icons.auto_delete),
+                                      tooltip: 'supprimer catégorie',
+                                      onPressed: () => _co!
+                                          .supprimerCategorie() //fonction a faire plus tard
+                                      ),
+>>>>>>> 62609d6dbdbd829588e788a0d420c9b1ed76d822
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "personne1         blablabla             XXX€            date"),
+                        color: Colors.green[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "vous        blablabla             XXX€            date"),
+                        color: Colors.blue[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "personne1         blablabla             XXX€            date"),
+                        color: Colors.green[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "personne1         blablabla             XXX€            date"),
+                        color: Colors.green[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "vous        blablabla             XXX€            date"),
+                        color: Colors.blue[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "vous        blablabla             XXX€            date"),
+                        color: Colors.blue[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "vous        blablabla             XXX€            date"),
+                        color: Colors.blue[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "vous        blablabla             XXX€            date"),
+                        color: Colors.blue[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "personne1         blablabla             XXX€            date"),
+                        color: Colors.green[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "personne1         blablabla             XXX€            date"),
+                        color: Colors.green[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "personne1         blablabla             XXX€            date"),
+                        color: Colors.green[400],
+                        alignment: Alignment.center,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Text(
+                            "personne1         blablabla             XXX€            date"),
+                        color: Colors.green[400],
+                        alignment: Alignment.center,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Center(
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.all(15),
+                    padding: EdgeInsets.only(left: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.orange,
+                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                  Text(
+                        '$nomCategorie', //----------------------------------------------------------------------------------------
+                        style: TextStyle(fontSize: 15),
+                  ),
+                  Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          IconButton(
+                            icon: const Icon(Icons.article_sharp),
+                            onPressed: () {},
+                            tooltip: 'Renommer la catégorie',
+                          ),
+                          IconButton(
+                            icon: const Icon(Icons.delete),
+                            onPressed: () {
+                              supressionPage(context);
+                            },
+                            tooltip: 'Supprimer la page',
+                          ),
+                        ],
+                      ),
+                    )
+                      ],
+                      ),
+                  ),
+                Padding(
+                  padding: EdgeInsets.only(top: 100),
+                  child: Text("Répartition des dépenses pour cette catégorie"),
+                ),
+              Container(
+                  padding: EdgeInsets.only(top: 10),
+                  width: 300,
+                child: Row(
+                  children: <Widget>[
+                  Radio(
+                    value: 'btn1',
+                      groupValue: boutonSelec,
+                        onChanged: (val) {
+                        boutonSelec = val.toString();
+                        setState(() {});
+                          }),
+                    Text("50/50")
+                  ],
+                  ),
+                ),
+              Container(
+                  width: 300,
+                  child: Row(
+                  children: <Widget>[
+                  Radio(
+                    value: 'btn2',
+                      groupValue: boutonSelec,
+                        onChanged: (val) {
+                        boutonSelec = val.toString();
+                        setState(() {});
+                          }),
+                    Flexible(
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 0, right: 10),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            hintText: 'Salaire 1'),
+                          ),
+                        ),
+                      ),
+                    Flexible(
+                      child: Padding(
+                        padding:
+                        EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                        child: TextField(
+                              decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            hintText: 'Salaire 2'),
+                          ),
+                        ),
+                      ),
+                    ],
+                    ),
+                  ),
+                Container(
+                  width: 300,
+                  child: Row(
+                  children: <Widget>[
+                  Radio(
+                    value: 'btn3',
+                      groupValue: boutonSelec,
+                        onChanged: (val) {
+                        boutonSelec = val.toString();
+                        setState(() {});
+                          }),
+                    Flexible(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(), hintText: '...'),
+                        ),
+                      ),
+                    Text("%")
+                  ],
+                  ),
+                ),
+                SizedBox(
+                  height: 25,
+                  ),
+              Container(
+                  padding: EdgeInsets.only(left: 40, right: 40),
+                  child: RaisedButton(
+                  onPressed: () {},
+                  padding: EdgeInsets.all(20.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                  child: Text(
+                    'Enregistrer',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ),
+                ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

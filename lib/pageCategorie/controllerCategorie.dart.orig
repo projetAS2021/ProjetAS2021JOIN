@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+import 'package:mvc_pattern/mvc_pattern.dart';
+import 'package:flutter/cupertino.dart';
+
+class ControllerCategorie extends ControllerMVC {
+  factory ControllerCategorie() {
+<<<<<<< HEAD
+    if (_this == null) {
+      _this = ControllerCategorie._();
+    }
+    return _this!;
+  }
+  static ControllerCategorie? _this;
+=======
+    if (_this == null) _this = ControllerCategorie._();
+    return _this!;
+  }
+  static ControllerCategorie? _this;
+
+>>>>>>> 62609d6dbdbd829588e788a0d420c9b1ed76d822
+  ControllerCategorie._();
+
+  /// Allow for easy access to 'the Controller' throughout the application.
+  static ControllerCategorie get con => _this!;
+
+  void supprimerCategorie() {}
+
+  String changerTitre(String titre) {
+    AlertDialog(
+      title: Text('entrez le nouveau nom de la catégorie'),
+      content: TextField(
+        keyboardType: TextInputType.text,
+      ),
+    );
+
+    return titre;
+  }
+}
