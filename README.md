@@ -8,6 +8,12 @@ Nous proposons de concevoir et de réaliser une application de simulation de dé
 ### Pré-requis :
 
 Ce dont vous avez besoin pour utiliser notre application :
+- Un compte Join.  
+Vous pouvez soit vous inscrire au travers de notre application, soit utiliser le compte de test qui est :  
+E-mail : @
+Mot de passe : @
+
+
 - Deux CSV, un pour chaque utilisateur :  
 
 Voici deux CSV déjà prêts, que vous pouvez utiliser pour tester l'application :  
