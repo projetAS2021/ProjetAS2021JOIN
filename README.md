@@ -55,7 +55,6 @@ Et voilà ! Vous avez installé Join.
 
 <img src="https://user-images.githubusercontent.com/85195647/120475855-2fe00800-c3aa-11eb-9050-61f92df824e6.png" alt="drawing" height="30%" width="30%"/> <img src="https://user-images.githubusercontent.com/85195647/120475904-40907e00-c3aa-11eb-833f-79fc80a888de.png" alt="drawing" height="30%" width="30%"/> <img src="https://user-images.githubusercontent.com/85195647/120609849-e4cdff80-c452-11eb-8a48-f48fd42accd4.png" alt="drawing" height="30%" width="30%"/> <img src="https://user-images.githubusercontent.com/85195647/120476004-5e5de300-c3aa-11eb-9177-ce8995d4a7be.png" alt="drawing" height="30%" width="30%"/> <img src="https://user-images.githubusercontent.com/85195647/120610038-0f1fbd00-c453-11eb-9f85-d7262ee5f171.png" alt="drawing" height="30%" width="30%"/> <img src="https://user-images.githubusercontent.com/85195647/120477169-c19c4500-c3ab-11eb-9802-569ee57383ba.png" alt="drawing" height="30%" width="30%"/>  
 
-![image]()
 
 ## Fait avec :
 * [Flutter](https://flutter.dev/) - Boîte a outils pour faire une interface, développé par Google
