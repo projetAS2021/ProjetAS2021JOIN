@@ -8,6 +8,9 @@ Nous proposons de concevoir et de réaliser une application de simulation de dé
 ### Pré-requis :
 
 Ce dont vous avez besoin pour utiliser notre application :
+- Deux CSV, un pour chaque utilisateur : 
+[csv de l'utilisateur 1](https://github.com/projetAS2021/ProjetAS2021JOIN/raw/main/csvUser1.csv)
+[csv de l'utilisateur 2](https://github.com/projetAS2021/ProjetAS2021JOIN/raw/main/csvUser2.csv)
 
 #### Sur téléphone : 
 - Un téléphone Android
