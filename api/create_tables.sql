@@ -1,0 +1,44 @@
+CREATE TABLE UTILISATEUR(
+   numU INT AUTO_INCREMENT,
+   email VARCHAR(50) NOT NULL,
+   nomU VARCHAR(50) NOT NULL,
+   prenom VARCHAR(50) NOT NULL,
+   mdpU VARCHAR(50) NOT NULL,
+   PRIMARY KEY(numU),
+   UNIQUE(email)
+);
+
+CREATE TABLE COMPTE(
+   numCpt INT AUTO_INCREMENT,
+   pourcCpt INT,
+   codeCompte INT,
+   numU_user2 INT NOT NULL,
+   numU_user1 INT NOT NULL,
+   PRIMARY KEY(numCpt),
+   UNIQUE(numU_user2),
+   UNIQUE(numU_user1),
+   FOREIGN KEY(numU_user2) REFERENCES UTILISATEUR(numU),
+   FOREIGN KEY(numU_user1) REFERENCES UTILISATEUR(numU)
+);
+
+CREATE TABLE CATEGORIE(
+   numCat INT AUTO_INCREMENT,
+   nomCat VARCHAR(50) NOT NULL,
+   pourcCat INT,
+   motCleCat TEXT,
+   numCpt INT NOT NULL,
+   PRIMARY KEY(numCat),
+   FOREIGN KEY(numCpt) REFERENCES COMPTE(numCpt)
+);
+
+CREATE TABLE DEPENSES(
+   numD INT AUTO_INCREMENT,
+   libelleD TEXT,
+   dateD DATETIME,
+   montantD DOUBLE,
+   numU INT NOT NULL,
+   numCat INT NOT NULL,
+   PRIMARY KEY(numD),
+   FOREIGN KEY(numU) REFERENCES UTILISATEUR(numU),
+   FOREIGN KEY(numCat) REFERENCES CATEGORIE(numCat)
+);
